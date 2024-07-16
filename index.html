@@ -21,7 +21,7 @@
             <template x-for="todo in todos" :key="todo.id">
                 <div>
                     <input type="checkbox" x-model="todo.completed">
-                 <span  x-text="todo.name" :class="{'completed:'}"></span> 
+                 <span  x-text="todo.name" :class="{'completed': todo.completed}"></span> 
                  <button @click="todos = todos.filter((currTodo) => currTodo != todo)" class="delete">x</button>  
                 </div>
                  </template>
